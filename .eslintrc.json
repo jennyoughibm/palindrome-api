@@ -1,0 +1,85 @@
+{
+  "env": {
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "airbnb-base"
+  ],
+  "rules": {
+    "import/prefer-default-export": "off",
+    "max-len": "off",
+    "newline-per-chained-call": "off",
+    "no-console": "off",
+    "no-nested-ternary": "off",
+    "no-param-reassign": "off",
+    "no-throw-literal": "off",
+    "no-underscore-dangle": "off",
+    "prefer-promise-reject-errors": "off",
+    "radix": "off",
+    "arrow-parens": [
+      "error",
+      "as-needed"
+    ],
+    "no-multi-spaces": [
+      "error",
+      {"exceptions": {"VariableDeclarator": true}}
+    ],
+    "no-plusplus":[
+      "error",
+      {"allowForLoopAfterthoughts": true }
+    ],
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "key-spacing": [
+      "error",
+      {"mode": "minimum"}
+    ],
+    "space-before-function-paren": [
+      "error",
+      "never"
+    ],
+    "no-unused-expressions": [
+      "error",
+      {"allowTernary": true}
+    ],
+    "indent": [
+      "error",
+      2
+    ],
+    "object-curly-spacing": [
+      "error",
+      "never"
+    ],
+    "array-bracket-spacing": [
+      "error",
+      "never"
+    ],
+    "brace-style": [
+      "error",
+      "1tbs"
+    ],
+    "keyword-spacing": "error",
+    "space-before-blocks": "error",
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ]
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  }
+ }

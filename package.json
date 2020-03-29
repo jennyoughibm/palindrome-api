@@ -1,0 +1,62 @@
+{
+  "name": "palindrome-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "local.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "hook-validation": "npm run test && npm run lint",
+    "start": "node -r esm local.js",
+    "build": "babel *.js -d dist && babel app -d dist/app",
+    "local-serve": "npm run build && node -r esm dist/local.js",
+    "docker-build": "docker build -t pallindromeapi .",
+    "lint": "./node_modules/.bin/eslint .",
+    "lint-fix": "./node_modules/.bin/eslint . --fix"
+  },
+  "author": "Jenny Ough",
+  "license": "ISC",
+  "dependencies": {
+    "aws-serverless-express": "^3.3.6",
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "config": "^3.2.3",
+    "cors": "^2.8.5",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "express-winston": "^3.4.0",
+    "swagger-ui-express": "^4.1.2",
+    "underscore": "^1.9.2",
+    "winston": "^3.2.1",
+    "winston-cloudwatch": "^2.0.9"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/register": "^7.6.2",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "jest": "^24.8.0",
+    "nock": "^11.4.0",
+    "sinon": "^7.5.0",
+    "supertest": "^4.0.2"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "app/**/*.{js,jsx,mjs}",
+      "!lambda.js",
+      "!local.js",
+      "!server.js",
+      "!app/utils/db.js",
+      "!app/utils/http.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 80
+      }
+    },
+    "testEnvironment": "node"
+  }
+}

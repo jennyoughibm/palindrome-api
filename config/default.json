@@ -1,0 +1,7 @@
+{
+  "application": "palindrome-api",
+  "version": "0.0.1",
+  "environment": "development",
+  "port": "8080",
+  "base_URL": "localhost"
+}
