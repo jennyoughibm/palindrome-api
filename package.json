@@ -27,7 +27,7 @@
     "swagger-ui-express": "^4.1.2",
     "underscore": "^1.9.2",
     "winston": "^3.2.1",
-    "winston-cloudwatch": "^2.0.9"
+    "winston-cloudwatch": "^6.1.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
